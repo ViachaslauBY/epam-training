@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-5</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/js-console.css">
+  <script src="js/js-console.js" defer></script>  
+</head>
+<body>
+  <header>    
+    <h1>Arrays</h1>    
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">01-Array * 5</a>
+        </li>
+        <li>
+          <a href="task-2.html">02-CompareCharArray</a>
+        </li>
+        <li>
+          <a href="task-3.html">03-MaximalSequence</a>
+        </li>
+        <li>
+          <a href="task-4.html">04-MaxIncreasingSequence</a>
+        </li>
+        <li>
+          <a href="task-5.html">05-SelectionSort</a>
+        </li>
+        <li>
+          <a href="task-6.html">06-MostFrequent</a>
+        </li>
+        <li>
+          <a href="task-7.html">07-BinarySearch</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>05 Selection Sort</h2>
+    <p>
+      Отсортировать массив – значит расположить его элементы в порядке возрастания. Напишите сценарий для сортировки массива. Используйте selection sort алгоритм: найти наименьший элемент, переместить его на первое место, найти наименьшее из остальных, переместите его на вторую позицию и т. д. Подсказка: Используйте второй массив. Вводить значения через пробел.
+    </p>    
+    <label>
+      Sequence
+      <input type="text" id="arr">
+    </label>    
+    <button id="execute">Execute</button>
+    <div id="console"></div>
+    <script>
+      let button = document.getElementById('execute');
+
+      function calculateSelectionSort() {
+        let arr = document.getElementById('arr').value.trim().split(' ');
+        jsConsole.writeLine('The input is:');
+        jsConsole.writeLine(`[${arr}]`);
+
+        let sort = arr.sort( (a, b) => a - b);
+        jsConsole.writeLine('The selection sort is:');
+        jsConsole.writeLine(`[${sort}]`);
+      }          
+
+      button.addEventListener('click', calculateSelectionSort);
+    </script>
+  </section>
+</body>
+</html>

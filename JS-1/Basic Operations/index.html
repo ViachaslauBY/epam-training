@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Operations</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>  
+</head>
+<body>
+  <h1>Basic Operations</h1>
+  <section>
+    <h2>Task 1</h2>
+    <p>Создайте 3 переменные x = 6, y = 15 и z = 4.</p> 
+    <p>Выполните и отобразите результат следующих операций для этих переменных:</p>   
+    <table>      
+      <tbody>
+        <tr>
+          <td><i>x += y - x++ * z;</i></td>
+          <td id="option1"></td>
+        </tr>
+        <tr>
+          <td>z = --x - y * 5;</td>
+          <td id="option2"></td>
+        </tr>
+        <tr>
+          <td>y /= x + 5 % z;</td>
+          <td id="option3"></td>
+        </tr>
+        <tr>
+          <td>z = x++ + y * 5;</td>
+          <td id="option4"></td>
+        </tr>
+        <tr>
+          <td>x = y - x++ * z;</td>
+          <td id="option5"></td>
+        </tr>
+      </tbody>
+    </table>    
+  </section>
+  <section>
+    <h2>Task 2</h2>
+    <p>Вычислите среднее арифметическое трех целочисленных значений и выведите его на экран.</p>
+    <form>
+      <table>        
+        <tbody>
+          <tr>
+            <td>X1</td>
+            <td><input id="firstNumber" type="text" placeholder="Enter number" value=""></td>
+            <td rowspan="4">
+              <button id="buttonCalculate">Посчитать</button>
+            </td>
+          </tr>
+          <tr>
+            <td>X2</td>
+            <td><input id="secondNumber" type="text" placeholder="Enter number"></td>
+          </tr>
+          <tr>
+            <td>X3</td>
+            <td><input id="thirdNumber" type="text" placeholder="Enter number"></td>
+          </tr>
+          <tr>
+            <td>Y</td>
+            <td><input id="result" type="text"></td>
+          </tr> 
+        </tbody>
+      </table>                 
+    </form>
+  </section>
+  <section>
+    <h2>Task 3</h2>
+    <p>Напишите программу расчета объема - V и площади поверхности - S цилиндра.</p> 
+    <p>Объем V цилиндра радиусом - r и высотой – h, вычисляется по формуле: V = πr<sup>2</sup>h.</p> 
+    <p>Площадь S поверхности цилиндра вычисляется по формуле: S = 2πrh + 2πr<sup>2</sup> = 2πr(r + h).</p>  
+    <p>Результаты расчетов выведите на экран.</p>  
+    <form>
+      <table>        
+        <tbody>
+          <tr>
+            <td>r</td>
+            <td><input id="radiusNumber" type="text" placeholder="Enter radius" value=""></td>
+            <td>V</td>
+            <td><input id="volumeValue" type="text" value=""></td>
+            <td rowspan="2">
+              <button id="buttonCount">Посчитать</button>
+            </td>
+          </tr>
+          <tr>
+            <td>h</td>
+            <td><input id="heightNumber" type="text" placeholder="Enter height" value=""></td>
+            <td>S</td>
+            <td><input id="squareValue" type="text" value=""></td>
+          </tr>          
+        </tbody>
+      </table>                 
+    </form>   
+  </section>
+</body>
+</html>

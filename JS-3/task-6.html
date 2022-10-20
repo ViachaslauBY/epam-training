@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-6</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/js-console.css">
+  <script src="js/js-console.js" defer></script>  
+</head>
+<body>
+  <header>    
+    <h1>Function</h1>    
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">01-LastDigit</a>
+        </li>
+        <li>
+          <a href="task-2.html">02-ReverseDigits</a>
+        </li>
+        <li>
+          <a href="task-3.html">03-WordCount</a>
+        </li>
+        <li>
+          <a href="task-4.html">04-DivCount</a>
+        </li>
+        <li>
+          <a href="task-5.html">05-NumberCount</a>
+        </li>
+        <li>
+          <a href="task-6.html">06-TwoNeighbors</a>
+        </li>
+        <li>
+          <a href="task-7.html">07-TwoNeighborsBigger</a>
+        </li>        
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>06 Two Neighbors</h2>
+    <p>
+      Напишите функцию, которая проверяет, является ли элемент в заданной позиции в заданном массиве целых чисел большим, чем его два соседа – слева и справа (когда такие существуют). Вводить значения через пробел.
+    </p>    
+    <label>
+      Sequence
+      <input type="text" id="arr">
+    </label>  
+    <label>
+      Position
+      <input type="text" id="pos">
+    </label>   
+    <button id="button">Execute</button>
+    <div id="console"></div>
+    <script>
+      let button = document.getElementById('button');
+
+      let checkElement = () => {
+        let arr = document.getElementById('arr').value.trim().split(' ');
+        let pos = document.getElementById('pos').value;         
+
+        if (+pos === 0 || +pos === arr.length - 1) {
+          jsConsole.writeLine('The position cannot be first or last element the sequence!');
+        } else if (arr[+pos] > arr[+pos + 1] && arr[+pos] > arr[+pos - 1]) {
+            jsConsole.writeLine('true');
+        } else {
+            jsConsole.writeLine('false');
+        }         
+      }         
+
+      button.addEventListener('click', checkElement);
+    </script>
+  </section>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-3</title>
+  <script src="main.js" defer></script>
+  <style>          
+    .items10.hidden,
+    .items15.hidden  {
+      display: none;
+    } 
+
+    th {
+      text-align: left;
+    }    
+
+    input[type="image"] {
+      padding: 5px;
+      width: 17px;
+      height: 15px;
+      border: 1px solid #a4abb2;
+      border-radius: 5px;
+    }
+
+    input[type="checkbox"] {
+      cursor: pointer;      
+    }
+
+    a {
+      display: inline-block;            
+      text-decoration: none;
+      color: #000;
+      vertical-align: middle;
+    }
+
+    a.button {            
+      width: 22px;
+      height: 22px;
+      padding: 5px;      
+      border: 1px solid #a4abb2;
+      border-radius: 5px;
+      text-align: center;            
+    }
+    
+  </style>
+</head>
+<body>
+  <form action="@">
+    <span>Drag a column header and drop it here to group by that column</span>
+    <table border="1" cellspacing="0" cellpadding="5">      
+      <thead style="background-color: #e6e8ea;">
+        <tr>
+          <th>ProductID</th>
+          <th width="270">Product name</th>
+          <th>Unit price</th>
+          <th>Quantity per unit</th>
+          <th>Units in stock</th>
+          <th>Discontinued</th>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" style="width: 80px;">
+          </td>
+          <td>
+            <input type="text" style="width: 255px;">
+          </td>
+          <td>
+            <input type="text" style="margin-right: 3px; width: 100px; vertical-align: middle;">
+            <input type="image" src="img/icon-filter.png" alt="Filter" style="vertical-align: middle;">
+          </td>
+          <td>
+            <input type="text" style="width: 145px;">
+          </td>
+          <td>
+            <input type="text" style="margin-right: 3px; width: 80px; vertical-align: middle;">
+            <input type="image" src="img/icon-filter.png" alt="Filter" style="vertical-align: middle;">
+          </td>
+          <td>
+            <input type="checkbox" style="vertical-align: middle;">
+            <input type="image" src="img/icon-filter.png" alt="Filter" style="vertical-align: middle;">
+          </td>
+        </tr>
+      </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Chai</td>
+            <td>$18.00</td>
+            <td>10 boxes x 20 bags</td>
+            <td>39</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Chang</td>
+            <td>$19.00</td>
+            <td>24 - 12 oz bottles</td>
+            <td>17</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Aniseed Syrup</td>
+            <td>$10.00</td>
+            <td>12 - 550 oz bottles</td>
+            <td>13</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Chef Anton's Cajun Seasoning</td>
+            <td>$22.00</td>
+            <td>48 - 6 oz jars</td>
+            <td>53</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Chef Anton's Gumbo Mix</td>
+            <td>$21.35</td>
+            <td>36 boxes</td>
+            <td>0</td>
+            <td>
+              <input type="checkbox" checked>
+            </td>
+          </tr>
+          <tr class="items10">
+            <td>6</td>
+            <td>Grandma's Boysenberry Spread</td>
+            <td>$25.00</td>
+            <td>12 - 8 oz jars</td>
+            <td>120</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr class="items10">
+            <td>7</td>
+            <td>Uncle Bob's Organic Dried Pears</td>
+            <td>$30.00</td>
+            <td>12 - 1 lb pkgs.</td>
+            <td>15</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr class="items10">
+            <td>8</td>
+            <td>Northwoods Cranberry Sause</td>
+            <td>$40.00</td>
+            <td>12 - 12 oz jars</td>
+            <td>6</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr class="items10">
+            <td>9</td>
+            <td>Mishi Kobe Niku</td>
+            <td>$97.00</td>
+            <td>18 - 500 lb pkgs.</td>
+            <td>29</td>
+            <td>
+              <input type="checkbox" checked>
+            </td>
+          </tr>
+          <tr class="items10">
+            <td>10</td>
+            <td>Ikura</td>
+            <td>$31.00</td>
+            <td>12 - 200 ml jars</td>
+            <td>31</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr> 
+          <tr class="items15 hidden">
+            <td>11</td>
+            <td>Grandma's Boysenberry Spread</td>
+            <td>$25.00</td>
+            <td>12 - 8 oz jars</td>
+            <td>120</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr class="items15 hidden">
+            <td>12</td>
+            <td>Uncle Bob's Organic Dried Pears</td>
+            <td>$30.00</td>
+            <td>12 - 1 lb pkgs.</td>
+            <td>15</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr class="items15 hidden">
+            <td>13</td>
+            <td>Northwoods Cranberry Sause</td>
+            <td>$40.00</td>
+            <td>12 - 12 oz jars</td>
+            <td>6</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr class="items15 hidden">
+            <td>14</td>
+            <td>Mishi Kobe Niku</td>
+            <td>$97.00</td>
+            <td>18 - 500 lb pkgs.</td>
+            <td>29</td>
+            <td>
+              <input type="checkbox" checked>
+            </td>
+          </tr>
+          <tr class="items15 hidden">
+            <td>15</td>
+            <td>Ikura</td>
+            <td>$31.00</td>
+            <td>12 - 200 ml jars</td>
+            <td>31</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>         
+        </tbody>
+        <tfoot style="background-color: #e6e8ea;">
+          <tr>
+            <td colspan="2" style="border-right: none;">
+              <a class="button" href="index.html">
+                <img src="img/arr-left.png" width="10" alt="Button">
+              </a> 
+              <a class="button" href="index.html">
+                <img src="img/arr-left2.png" width="10" alt="Button">
+              </a>
+              <a href="index.html">1</a>             
+              <a href="page2.html">2</a>             
+              <a href="page3.html">3</a>
+              <a class="button" href="page2.html">
+                <img src="img/arr-right2.png" width="10" alt="Button">
+              </a>
+              <a class="button" href="page3.html">
+                <img src="img/arr-right.png" width="10" alt="Button">
+              </a>                            
+            </td> 
+            <td style="border-right: none; border-left: none;">
+              Page size:
+              <select name="number" id="select">
+                <option value="5">5</option>
+                <option value="10" selected>10</option>
+                <option value="15">15</option>
+              </select> 
+            </td> 
+            <td colspan="3" align="right" style="border-left: none;">
+              45 items in 3 pages
+            </td>                 
+          </tr>
+        </tfoot>      
+    </table>
+  </form>
+</body>
+</html>

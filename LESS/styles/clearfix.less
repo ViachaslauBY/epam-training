@@ -1,0 +1,52 @@
+// main: style.less
+
+.content {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.zoom {
+  zoom: 1;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix {
+  .zoom;
+
+  &::after {
+    .content;
+    .clear;
+  }
+
+  &::before {
+    .content;
+  }
+}
+
+header {
+  div#header-container {
+    .clearfix;
+    nav {
+      .clearfix;
+      ul {
+        .clearfix;
+        li ul.sub-nav-list {
+          .clearfix;
+        }
+      }
+    }
+  }
+}
+
+section {
+  .clearfix;
+}
+
+aside {
+  .clearfix;
+}

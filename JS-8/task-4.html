@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-4</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/js-console.css">
+  <script src="js/task-4.js" defer></script>  
+  <script src="js/js-console.js" defer></script>    
+</head>
+<body>
+  <header>    
+    <h1>DOM</h1>    
+    <nav>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">01-FindDivs</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="task-2.html">02-GetValueInput</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="task-3.html">03-ChangeBackgroundColor</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="task-4.html">04-CircleMotion</a>
+        </li>                          
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>04 CircleMotion</h2>
+    <p>
+      Напишите скрипт, который создает  элементы и перемещает их по круговому пути с любым интервалом миллисекунд.
+    </p> 
+    <div class="wrap">
+      <button id="button">Create Divs</button>
+      <input id="quantity" type="number" step="1" min="1" max="8" value="1">
+    </div>      
+    <div class="wrap">
+      <button id="button2">Animate Divs</button>
+      <input class="input__speed" id="speed" type="range" min="0" max="1000" value="500" step="100">
+      <span>Speed:</span>
+      <span id="text"></span>
+    </div>    
+    <div id="console">
+      <div class="sun"></div>
+    </div>    
+  </section>
+</body>
+</html>

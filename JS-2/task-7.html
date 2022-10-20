@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-7</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/js-console.css">
+  <script src="js/js-console.js" defer></script>  
+</head>
+<body>
+  <header>    
+    <h1>Arrays</h1>    
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">01-Array * 5</a>
+        </li>
+        <li>
+          <a href="task-2.html">02-CompareCharArray</a>
+        </li>
+        <li>
+          <a href="task-3.html">03-MaximalSequence</a>
+        </li>
+        <li>
+          <a href="task-4.html">04-MaxIncreasingSequence</a>
+        </li>
+        <li>
+          <a href="task-5.html">05-SelectionSort</a>
+        </li>
+        <li>
+          <a href="task-6.html">06-MostFrequent</a>
+        </li>
+        <li>
+          <a href="task-7.html">07-BinarySearch</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>07 Binary Search</h2>
+    <p>
+      Напишите программу, которая находит индекс данного элемента в отсортированном мас-сиве целых чисел, используя алгоритм двоичного поиска. Вводить значения через пробел.
+    </p>    
+    <label>
+      Sequence
+      <input type="text" id="arr">
+    </label>  
+    <label>
+      Searched Value
+      <input type="text" id="searchedValue">
+    </label>  
+    <button id="execute">Execute</button>
+    <div id="console"></div>
+    <script>
+      let button = document.getElementById('execute');
+
+      function findIndext() {
+        let arr = document.getElementById('arr').value.trim().split(' ');
+        let searchedValue = document.getElementById('searchedValue').value;
+        let sortedArray = arr.sort( (a, b) => a - b);
+        jsConsole.writeLine('Sorted array:');
+        jsConsole.writeLine(`[${sortedArray}]`);
+
+
+        let leftBoundary = 0;
+        let rightBoundary = sortedArray.length - 1;
+        let index = 0;
+      
+        let res = -1;
+
+        while (leftBoundary <= rightBoundary) {
+          index = Math.floor((rightBoundary + leftBoundary) / 2);
+          
+          if (sortedArray[index] == searchedValue) {
+            res = index;
+            break;
+          }
+          
+          if (sortedArray[index] < searchedValue) {
+            leftBoundary = index + 1;
+          } else {
+            rightBoundary = index - 1;
+          }
+        }
+
+        if (res != -1) {
+          jsConsole.writeLine(`The index of ${searchedValue} is ${res}`);
+        }
+        else {
+          jsConsole.writeLine("There is no such element in the array");
+        }       
+      }                  
+
+      button.addEventListener('click', findIndext);
+    </script>
+  </section>
+</body>
+</html>

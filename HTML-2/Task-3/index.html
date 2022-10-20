@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3</title>
+  <style> 
+    table {
+      border-spacing: 5px;
+      border-collapse: separate;
+    }   
+
+    input {
+      font-size: 24px;
+      font-weight: 700;
+      border-radius: 5px;
+    }
+
+    input[type="button"] {      
+      width: 50px;
+      height: 50px;  
+      background-color: white;
+      cursor: pointer;    
+    }
+
+    input[type="button"]:hover {      
+      background-color: lightgrey;          
+    }
+
+    input[type="text"] { 
+      width: 213px; 
+      height: 50px;
+      text-align: right;
+      background-color: lightgray;      
+    }
+    
+    input.zero {
+      width: 107px;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <table>
+      <tbody>        
+        <tr>
+          <td colspan="4">
+            <input type="text" value="123" disabled>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="1">
+          </td>
+          <td>
+            <input type="button" value="2">
+          </td>
+          <td>
+            <input type="button" value="3">
+          </td>
+          <td>
+            <input type="button" value="+">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="4">
+          </td>
+          <td>
+            <input type="button" value="5">
+          </td>
+          <td>
+            <input type="button" value="6">
+          </td>
+          <td>
+            <input type="button" value="-">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="7">
+          </td>
+          <td>
+            <input type="button" value="8">
+          </td>
+          <td>
+            <input type="button" value="9">
+          </td>
+          <td>
+            <input type="button" value="*">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input class="zero" type="button" value="0">
+          </td>
+          <td>
+            <input type="button" value=".">
+          </td>
+          <td>
+            <input type="button" value="/">
+          </td>          
+        </tr>
+      </tbody>
+    </table>    
+  </form>
+</body>
+</html>

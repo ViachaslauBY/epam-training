@@ -1,0 +1,58 @@
+.wrapper {
+  padding: 50px;
+  max-width: 850px;
+  background-color: #5b5b5b;
+}
+
+.shadow {
+  width: 800px;
+  height: 44px;
+  background-image: url("img/shadow.png");
+  background-repeat: no-repeat;
+}
+
+form {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+img,
+input,
+span {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  font-weight: 700;
+}
+
+span {
+  color: #fff;
+}
+
+button {
+  padding: 3px 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  background: rgb(240, 240, 240);
+  background: linear-gradient(
+    180deg,
+    rgba(240, 240, 240, 1) 35%,
+    rgba(213, 213, 213, 1) 50%
+  );
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  color: #ffc100;
+}
+
+p {
+  color: #9fa6a6;
+}

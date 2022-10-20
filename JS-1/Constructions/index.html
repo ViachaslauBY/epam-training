@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constructions</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <h1>Constructions</h1>
+  <section>
+    <h2>Task 1</h2>
+    <p>Дано два числа A и B где (A &lt; B).</p>
+    <p>Выведите на экран суму всех чисел (C) расположенных в числовом промежутке от А до В.</p>
+    <p>Выведите на экран все нечетные значения (D), расположенные в числовом промежутке от А до В.</p>
+    <form>
+      <table>        
+        <tbody>
+          <tr>
+            <td>A</td>
+            <td>
+              <input id="firstNumber" type="text" placeholder="Enter number" value="">
+            </td>
+            <td rowspan="4">
+              <button id="buttonCalculate">Посчитать</button>
+            </td>
+          </tr>
+          <tr>
+            <td>B</td>
+            <td>
+              <input id="secondNumber" type="text" placeholder="Enter number" value="">
+            </td>
+          </tr>          
+          <tr>
+            <td>С</td>
+            <td>
+              <input id="result" type="text" placeholder="Sum of numbers" value="">
+            </td>
+          </tr> 
+          <tr>
+            <td>D</td>
+            <td>
+              <textarea id="oddNumbers" cols="17" rows="10" placeholder="Odd Numbers"></textarea>
+            </td>
+          </tr> 
+        </tbody>
+      </table>                 
+    </form>
+  </section>
+  <section>
+    <h2>Task 2</h2>
+    <p>
+      Напишите программу, которая будет рассчитывать и выводить на экран количество возможных вариантов доставки товара. Для решения задачи, используйте факториал N!, рассчитываемый с помощью цикла do-while .
+    </p>
+    <form>
+      <table>
+        <tbody>
+          <tr>
+            <td>Колличество магазинов</td>
+            <td>
+              <input id="numberShops" type="text" placeholder="Enter number" value="">
+            </td>
+            <td rowspan="2">
+              <button id="buttonDeem">Посчитать</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Колличество вариантов доставки</td>
+            <td><input id="numberDeliveries" type="text" value=""></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </section>
+  <section>
+    <h2>Task 3</h2>
+    <p>Используя циклы нарисуйте в браузере с помощью пробелов (&nbsp;) и звездочек (*):</p>          
+    <table>
+      <tbody>
+        <tr>
+          <td>Rectangle</td>
+          <td>
+            <script>
+              for (let i = 0; i < 8; i++) {
+      
+                for (let j = 0; j < 13; j++) {
+                  document.write("* ");
+                }
+      
+                document.write("<br/>");
+              }
+            </script>
+          </td>
+        </tr>
+        <tr>
+          <td>Rect. triangle</td>
+          <td>
+            <script>
+              for (let i = 1; i < 9; i++) {  
+    
+                for (let j = 1; j <= i; j++) {
+                  document.write("* ");
+                }
+    
+                document.write("<br/>");
+              }
+            </script>
+          </td>
+        </tr>
+        <tr>
+          <td>Triangle</td>
+          <td>
+            <script>
+              for (let i = 2; i < 10; i++) {
+    
+                for (let j = 9; j > i; j--) {
+                    document.write("&nbsp;"); 
+                }
+    
+                for (let k = 1; k < i; k++) {
+                  document.write("* ");
+                }
+    
+                document.write("<br/>");
+              };
+            </script>
+          </td>
+        </tr>
+        <tr>
+          <td>Rhomb</td>
+          <td>
+            <script>
+              for (let i = 0; i < 8; i++) {
+
+                for (let j = 8 ; j > i; j--) {
+                  document.write("&nbsp;");
+                }
+
+                for (let k = 0; k < i; k++) {
+                  document.write("* ");
+                }
+
+                document.write("<br>");
+              }
+    
+              for (let i = 0; i < 8; i++) {
+
+                for (let j = 0; j < i; j++) {
+                  document.write("&nbsp;");
+                }
+
+                for (let k = 8; k > i; k--) {
+                  document.write("* ");
+                }
+
+                document.write("<br>");
+              }    
+            </script>
+          </td>
+        </tr>
+      </tbody>
+    </table>                            
+  </section>
+</body>
+</html>

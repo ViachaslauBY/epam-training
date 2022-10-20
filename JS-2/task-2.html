@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-2</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/js-console.css">
+  <script src="js/js-console.js" defer></script>  
+</head>
+<body>
+  <header>    
+    <h1>Arrays</h1>    
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">01-Array * 5</a>
+        </li>
+        <li>
+          <a href="task-2.html">02-CompareCharArray</a>
+        </li>
+        <li>
+          <a href="task-3.html">03-MaximalSequence</a>
+        </li>
+        <li>
+          <a href="task-4.html">04-MaxIncreasingSequence</a>
+        </li>
+        <li>
+          <a href="task-5.html">05-SelectionSort</a>
+        </li>
+        <li>
+          <a href="task-6.html">06-MostFrequent</a>
+        </li>
+        <li>
+          <a href="task-7.html">07-BinarySearch</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>02 Compare Char Array</h2>
+    <p>
+      Напишите скрипт, который сравнивает два char массива лексикографически (буква за буквой). Вводить значения через пробел.
+    </p>    
+    <label>
+      Array 1
+      <input type="text" id="string1">
+    </label>
+    <label>
+      Array 2
+      <input type="text" id="string2">
+    </label>
+    <button id="execute">Execute</button>
+    <div id="console"></div>
+    <script>
+      let button = document.getElementById('execute');
+
+      function сompareCharArray() {
+        let arr = document.getElementById('string1').value.trim().split(' ');
+        let arr2 = document.getElementById('string2').value.trim().split(' ');
+        let string = arr.join('');
+        let string2 = arr2.join('');
+
+        if (string < string2) {
+          jsConsole.writeLine("The first array earlier!");
+        } else if (string2 < string) {
+          jsConsole.writeLine("The second array is earlier");
+        } else {
+          jsConsole.writeLine("The two arrays are equal!"); 
+        }
+      }        
+
+      button.addEventListener('click', сompareCharArray);
+    </script>
+  </section>
+</body>
+</html>

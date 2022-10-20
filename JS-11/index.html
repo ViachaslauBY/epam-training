@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://fonts.cdnfonts.com/css/bradley-hand-2" rel="stylesheet">
+  <link href="http://fonts.cdnfonts.com/css/liferdas-extra" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <title>Guess the number</title>
+</head>
+<body>
+  <div class="wrapper">
+    <button id="replay">Play again</button>
+    <div id="randomNumber"></div>
+    <div id="block" class="container">
+      <h1 class="title">Guess the number</h1>      
+      <div class="container__number">
+        <label class="label">Enter number:
+          <input id="number" type="text">
+        </label>
+        <button id="button">Enter</button>
+      </div>         
+      <div id="text"></div>
+    </div>
+    <div id="modal">
+      <div class="congrat"></div> 
+      <div class="container__user">
+        <span class="user__text">Please enter your username:</span>
+        <input type="text" id="username">
+        <button id="submit">Submit</button>
+      </div>            
+    </div>    
+    <table id="result">
+      <tbody>
+        <tr>        
+          <th>User</th>
+          <th>Steps</th>
+        </tr>
+      </tbody>      
+    </table>      
+  </div>        
+</body>
+</html>

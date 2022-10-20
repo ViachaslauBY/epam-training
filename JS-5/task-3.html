@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-3</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/js-console.css">
+  <script src="js/js-console.js" defer></script>  
+</head>
+<body>
+  <header>    
+    <h1>Function</h1>    
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">01-ConcatStrings</a>
+        </li>
+        <li>
+          <a href="task-2.html">02-CompareParameters</a>
+        </li>
+        <li>
+          <a href="task-3.html">03-OutputMessage</a>
+        </li>
+        <li>
+          <a href="task-4.html">04-NumbersFibonacci</a>
+        </li>
+        <li>
+          <a href="task-5.html">05-Spam</a>
+        </li> 
+        <li>
+          <a href="task-6.html">06-Ellipsis</a>
+        </li>               
+      </ul>          
+    </nav>
+  </header>
+  <section>
+    <h2>03 Output Message</h2>
+    <p>
+      Напишите анонимную функцию, которая должна вывести сообщение «message in console» в консоли.   
+    </p>     
+    
+    <button id="button">Execute</button>
+    <div id="console"></div>
+    <script>
+      let button = document.getElementById('button');                                                                  
+
+      button.addEventListener('click', function(){
+        jsConsole.writeLine('Hello word!!!');        
+      })
+    </script>
+  </section>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-2</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/js-console.css">
+  <script src="js/js-console.js" defer></script>  
+</head>
+<body>
+  <header>    
+    <h1>Function</h1>    
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">01-ConcatStrings</a>
+        </li>
+        <li>
+          <a href="task-2.html">02-CompareParameters</a>
+        </li>
+        <li>
+          <a href="task-3.html">03-OutputMessage</a>
+        </li>
+        <li>
+          <a href="task-4.html">04-NumbersFibonacci</a>
+        </li>
+        <li>
+          <a href="task-5.html">05-Spam</a>
+        </li> 
+        <li>
+          <a href="task-6.html">06-Ellipsis</a>
+        </li>               
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>02 Compare Parameters</h2>
+    <p>
+      Напишите функцию, которая должна сравнить два параметра a и b и вернуть 1, если a равно b и -1, если a не равно b.
+    </p>    
+    <label>
+      String1:
+      <input type="text" id="string1">
+    </label>
+    <label>
+      String2:
+      <input type="text" id="string2">
+    </label>
+    <button id="button">Execute</button>
+    <div id="console"></div>
+    <script>
+      let button = document.getElementById('button');      
+
+      let compareParameters = function () {
+        let string1 = document.getElementById('string1').value;
+        let string2 = document.getElementById('string2').value;
+        jsConsole.writeLine(string1 === string2 ? 1 : -1);
+      }                         
+
+      button.addEventListener('click', compareParameters);
+    </script>
+  </section>
+</body>
+</html>

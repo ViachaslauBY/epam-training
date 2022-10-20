@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__logo">
+        <img class="header__logo-img" src="img/icon-calc.png" alt="Калькулятор">
+        <h1 class="header__title">Calculator</h1>
+      </div>
+      <div class="header__buttons">
+        <input class="header__button-rollup" type="image" src="img/btn-roll-up.png" alt="Кнопка разрнуть">
+        <input class="header__button-expand" type="image" src="img/btn-expand.png" alt="Кнопка свернуть">        
+        <input class="header__button-close" type="image" src="img/btn-close.png" alt="Кнопка закрыть">
+      </div> 
+    </header>    
+    <div class="wrapper__calculator">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__item-link" href="#">View</a> 
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link" href="#">Edit</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link" href="#">Help</a>
+          </li>
+        </ul>
+      </nav>
+      <form class="form">      
+        <div class="wrapper__result">
+          <input class="result" type="text" value="0">
+        </div>
+        
+        <table class="number-systems__table">
+          <tbody>
+            <tr>
+              <td>
+                <input class="number-system__result" type="text" value="0000">
+              </td>
+              <td>
+                <input class="number-system__result" type="text" value="0000">
+              </td>
+              <td>
+                <input class="number-system__result" type="text" value="0000">
+              </td>
+              <td>
+                <input class="number-system__result" type="text" value="0000">
+              </td>
+              <td>
+                <input class="number-system__result" type="text" value="0000">
+              </td>
+              <td>
+                <input class="number-system__result" type="text" value="0000">
+              </td>
+              <td>
+                <input class="number-system__result" type="text" value="0000">
+              </td>
+              <td>
+                <input class="number-system__result" type="text" value="0000">
+              </td>                
+            </tr>
+            <tr>
+              <td colspan="4">
+                <input class="number-system__result2 grey" type="text" value="31">
+              </td>
+              <td colspan="3">
+                <input class="number-system__result2 grey" type="text" value="15">
+              </td>
+              <td>
+                <input class="number-system__result2 grey right" type="text" value="0">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="number-system__result" type="text" value="0000">
+              </td>
+              <td>
+                <input class="number-system__result" type="text" value="0000">
+              </td>
+              <td>
+                <input class="number-system__result" type="text" value="1000">
+              </td>
+              <td>
+                <input class="number-system__result" type="text" value="0111">
+              </td>
+              <td>
+                <input class="number-system__result" type="text" value="0001">
+              </td>
+              <td>
+                <input class="number-system__result" type="text" value="1011">
+              </td>
+              <td>
+                <input class="number-system__result" type="text" value="1011">
+              </td>
+              <td>
+                <input class="number-system__result" type="text" value="0111">
+              </td>                
+            </tr>
+            <tr>
+              <td colspan="4">
+                <input class="number-system__result2 grey" type="text" value="63">
+              </td>
+              <td colspan="3">
+                <input class="number-system__result2 grey" type="text" value="47">
+              </td>
+              <td>
+                <input class="number-system__result2 grey right" type="text" value="32">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="buttons__table">
+          <tbody>
+            <tr>
+              <td rowspan="3" colspan="2">
+                <div class="wrapper-buttons__system">
+                  <div class="button__system">
+                    <input type="radio" id="hex" name="Hex">
+                    <label for="hex">Hex</label>
+                  </div>
+                  <div class="button__system">
+                    <input type="radio" id="dec" name="Dec" checked>
+                    <label for="dec">Dec</label>
+                  </div>
+                  <div class="button__system">
+                    <input type="radio" id="oct" name="Oct">
+                    <label for="oct">Oct</label>
+                  </div>
+                  <div class="button__system">
+                    <input type="radio" id="bin" name="Bin">
+                    <label for="bin">Bin</label>
+                  </div>
+                </div>                                        
+              </td>          
+              <td>
+                <input class="button" type="button" value=" ">
+              </td>
+              <td>
+                <input class="button" type="button" value="Mod">
+              </td>
+              <td>
+                <input class="button null" type="button" value="A">
+              </td>
+              <td>
+                <input class="button" type="button" value="MC">
+              </td>
+              <td>
+                <input class="button" type="button" value="MR">
+              </td>
+              <td>
+                <input class="button" type="button" value="MS">
+              </td>
+              <td>
+                <input class="button" type="button" value="M+">
+              </td>
+              <td>
+                <input class="button" type="button" value="M-">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="button" type="button" value="(">
+              </td>
+              <td>
+                <input class="button" type="button" value=")">
+              </td>
+              <td>
+                <input class="button null" type="button" value="B">
+              </td>
+              <td>
+                <input class="button" type="button" value="⟵">
+              </td>
+              <td>
+                <input class="button" type="button" value="CE">
+              </td>
+              <td>
+                <input class="button" type="button" value="C">
+              </td>
+              <td>
+                <input class="button" type="button" value="±">
+              </td>
+              <td>
+                <input class="button" type="button" value="√">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="button" type="button" value="RoL">
+              </td>
+              <td>
+                <input class="button" type="button" value="RoR">
+              </td>
+              <td>
+                <input class="button null" type="button" value="C">
+              </td>
+              <td>
+                <input class="button" type="button" value="7">
+              </td>
+              <td>
+                <input class="button" type="button" value="8">
+              </td>
+              <td>
+                <input class="button" type="button" value="9">
+              </td>
+              <td>
+                <input class="button" type="button" value="/">
+              </td>
+              <td>
+                <input class="button" type="button" value="%">
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="3" colspan="2">
+                <div class="wrapper-buttons__system">
+                  <div class="button__system">
+                    <input type="radio" id="qword" name="Qword" checked>
+                    <label for="qword">Qword</label>
+                  </div>
+                  <div class="button__system">
+                    <input type="radio" id="dword" name="Dword">
+                    <label for="dword">Dword</label>
+                  </div>
+                  <div class="button__system">
+                    <input type="radio" id="word" name="Word">
+                    <label for="word">Word</label>
+                  </div>
+                  <div class="button__system">
+                    <input type="radio" id="byte" name="Byte">
+                    <label for="byte">Byte</label>
+                  </div>
+                </div>                                        
+              </td>          
+              <td>
+                <input class="button"  type="button" value="Or">
+              </td>
+              <td>
+                <input class="button" type="button" value="Xor">
+              </td>
+              <td>
+                <input class="button null" type="button" value="D">
+              </td>
+              <td>
+                <input class="button" type="button" value="4">
+              </td>
+              <td>
+                <input class="button" type="button" value="5">
+              </td>
+              <td>
+                <input class="button"  type="button" value="6">
+              </td>
+              <td>
+                <input class="button" type="button" value="*">
+              </td>
+              <td>
+                <input class="button" type="button" value="1/x">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="button" type="button" value="Lsh">
+              </td>
+              <td>
+                <input class="button" type="button" value="Rsh">
+              </td>
+              <td>
+                <input class="button null" type="button" value="E">
+              </td>
+              <td>
+                <input class="button" type="button" value="1">
+              </td>
+              <td>
+                <input class="button" type="button" value="2">
+              </td>
+              <td>
+                <input class="button" type="button" value="3">
+              </td>
+              <td>
+                <input class="button" type="button" value="-">
+              </td>
+              <td rowspan="2">
+                <input class="equally" type="button" value="=">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="button" type="button" value="Not">
+              </td>
+              <td>
+                <input class="button" type="button" value="And">
+              </td>
+              <td>
+                <input class="button null" type="button" value="F">
+              </td>
+              <td colspan="2">
+                <input class="zero" type="button" value="0">
+              </td>
+              <td>
+                <input class="button" type="button" value=".">
+              </td>
+              <td>
+                <input class="button" type="button" value="+">
+              </td>              
+            </tr>
+          </tbody>          
+        </table>        
+      </form>  
+    </div>      
+  </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+%content {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+%zoom {
+  zoom: 1;
+}
+
+%clear {
+  clear: both;
+}
+
+@mixin clearfix {
+  @extend %zoom;
+
+  &::after {
+    @extend %content;
+    @extend %clear;
+  }
+
+  &::before {
+    @extend %content;
+  }
+}
+
+header {
+  div#header-container {
+    @include clearfix;
+    nav {
+      @include clearfix;
+      ul {
+        @include clearfix;
+        li ul.sub-nav-list {
+          @include clearfix;
+        }
+      }
+    }
+  }
+}
+
+section {
+  @include clearfix;
+}
+
+aside {
+  @include clearfix;
+}

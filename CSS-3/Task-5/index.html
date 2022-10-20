@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-5</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>  
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Apple</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Toshiba</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Lenovo</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Dell</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Asus</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Hacer</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">HP</a>
+          </li>
+        </ul>
+      </nav>      
+    </header>
+    <hr class="stripe">
+    <main class="main">
+      <div class="assortment">
+        <fieldset class="assortment__item">
+          <legend class="item__title">Apple MacBook Air</legend>
+          <div class="item__wrapper">
+            <figure class="item__img-wrapper">
+              <img class="item__img" src="img/macbook.jpg">
+              <figcaption class="item__img-title">1300 USD</figcaption>
+            </figure>
+            <div class="item__descritipon">
+              <span class="item__text">64 GB SSD</span>
+              <span class="item__text">2 GB DDR</span>
+              <span class="item__text">Intel Core i5</span>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="assortment__item">
+          <legend class="item__title">Apple MacBook Air</legend>
+          <div class="item__wrapper">
+            <figure class="item__img-wrapper">
+              <img class="item__img" src="img/macbook.jpg">
+              <figcaption class="item__img-title">1300 USD</figcaption>
+            </figure>
+            <div class="item__descritipon">
+              <span class="item__text">64 GB SSD</span>
+              <span class="item__text">2 GB DDR</span>
+              <span class="item__text">Intel Core i5</span>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="assortment__item">
+          <legend class="item__title">Apple MacBook Air</legend>
+          <div class="item__wrapper">
+            <figure class="item__img-wrapper">
+              <img class="item__img" src="img/macbook.jpg">
+              <figcaption class="item__img-title">1300 USD</figcaption>
+            </figure>
+            <div class="item__descritipon">
+              <span class="item__text">64 GB SSD</span>
+              <span class="item__text">2 GB DDR</span>
+              <span class="item__text">Intel Core i5</span>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="assortment__item">
+          <legend class="item__title">Apple MacBook Air</legend>
+          <div class="item__wrapper">
+            <figure class="item__img-wrapper">
+              <img class="item__img" src="img/macbook.jpg">
+              <figcaption class="item__img-title">1300 USD</figcaption>
+            </figure>
+            <div class="item__descritipon">
+              <span class="item__text">64 GB SSD</span>
+              <span class="item__text">2 GB DDR</span>
+              <span class="item__text">Intel Core i5</span>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="assortment__item">
+          <legend class="item__title">Apple MacBook Air</legend>
+          <div class="item__wrapper">
+            <figure class="item__img-wrapper">
+              <img class="item__img" src="img/macbook.jpg">
+              <figcaption class="item__img-title">1300 USD</figcaption>
+            </figure>
+            <div class="item__descritipon">
+              <span class="item__text">64 GB SSD</span>
+              <span class="item__text">2 GB DDR</span>
+              <span class="item__text">Intel Core i5</span>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="assortment__item">
+          <legend class="item__title">Apple MacBook Air</legend>
+          <div class="item__wrapper">
+            <figure class="item__img-wrapper">
+              <img class="item__img" src="img/macbook.jpg">
+              <figcaption class="item__img-title">1300 USD</figcaption>
+            </figure>
+            <div class="item__descritipon">
+              <span class="item__text">64 GB SSD</span>
+              <span class="item__text">2 GB DDR</span>
+              <span class="item__text">Intel Core i5</span>
+            </div>
+          </div>
+        </fieldset>        
+      </div>
+      <div class="configuration">
+        <form class="configuration__form">
+          <div class="form__section">
+            <div class="form__value">
+              <span>Min price:</span>
+              <span id="valueMinPrice"></span> 
+              <span>USD</span> 
+            </div>            
+            <input class="form__input" id="rangeMinPrice" type="range" min="0" max="1000" value="500" step="100">
+          </div>
+          <div class="form__section">
+            <div class="form__value">
+              <span>Max price:</span>
+              <span id="valueMaxPrice"></span> 
+              <span>USD</span> 
+            </div>            
+            <input class="form__input" id="rangeMaxPrice" type="range" min="0" max="3000" value="1500" step="500">
+          </div>
+          <div class="form__section">
+            <div class="form__value">
+              <span>Min RAM:</span>
+              <span id="valueMinRam"></span> 
+              <span>GB</span> 
+            </div>            
+            <input class="form__input" id="rangeMinRam" type="range" min="0" max="8" value="4" step="2">
+          </div>
+          <div class="form__section">
+            <div class="form__value">
+              <span>Max RAM:</span>
+              <span id="valueMaxRam"></span> 
+              <span>GB</span> 
+            </div>            
+            <input class="form__input" id="rangeMaxRam" type="range" min="0" max="32" value="16" step="4">
+          </div>          
+        </form>
+      </div>
+    </main>
+  </div>            
+</body>
+</html>

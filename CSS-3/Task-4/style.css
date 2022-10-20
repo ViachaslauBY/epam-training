@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 5px;
+  font-size: 16px;
+  color: #000;
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  border: 2px solid #000;
+  background-color: #f1f1f1;
+}
+
+.nav {
+  padding: 25px 20px 5px 10px;
+  width: 15%;
+}
+
+.nav__title {
+  display: flex;
+  align-items: baseline;
+}
+
+.nav__title-img {
+  margin-right: 5px;
+  width: 30px;
+}
+
+.nav__title-link {
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav__list-title {
+  margin-top: 15px;
+  font-weight: 700;
+  color: #961917;
+}
+
+.nav__item-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.main {
+  margin-top: 5px;
+  margin-right: 5px;
+  padding: 20px 5px;
+  width: 60%;
+  height: fit-content;
+  border: 2px solid #808080;
+  background-color: #fff;
+}
+
+.main__title {
+  margin-bottom: 15px;
+}
+
+.main__buttons {
+  margin-bottom: 10px;
+}
+
+.button-previous,
+.button-next {
+  display: inline-block;
+  width: 100px;
+  height: 25px;
+  border: 1px solid #000;
+  font-size: 14px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-previous {
+  background: url("img/arrow-left.png") no-repeat center left;
+}
+
+.button-next {
+  background: url("img/arrow-right.png") no-repeat center right;
+}
+
+.stripe {
+  margin-bottom: 10px;
+  height: 1px;
+  background-color: #808080;
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.section__title {
+  margin-bottom: 15px;
+  padding: 0 5px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #808080;
+}
+
+.section__img {
+  float: left;
+  margin-right: 15px;
+  width: 60px;
+}
+
+.section__text {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.section__link {
+  font-weight: 700;
+  color: #961917;
+}
+
+.aside {
+  margin-top: 5px;
+  width: 20%;
+  height: fit-content;
+  text-align: center;
+  background-color: #fff;
+}
+
+.aside__section {
+  padding-bottom: 2px;
+  border: 2px solid #808080;
+}
+
+.aside__section:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.aside__title {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #808080;
+}
+
+.aside__form {
+  margin-bottom: 5px;
+  padding: 5px 10px;
+}
+
+.aside__input {
+  display: inline-block;
+  width: 100%;
+  max-width: 140px;
+}
+
+.aside__button {
+  cursor: pointer;
+}
+
+.aside__button2 {
+  margin-top: 5px;
+  width: 155px;
+  height: 35px;
+  border: 1px solid #689bc2;
+  color: #60d4fe;
+  font-weight: 700;
+  background: rgb(192, 230, 250);
+  background: radial-gradient(
+    circle,
+    rgba(192, 230, 250, 1) 87%,
+    rgba(152, 214, 247, 1) 97%
+  );
+  cursor: pointer;
+}
+
+.aside__link {
+  display: block;
+  font-weight: 700;
+  color: #961917;
+  word-wrap: break-word;
+}

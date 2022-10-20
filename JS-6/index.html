@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-1</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/js-console.css">
+  <script src="js/js-console.js" defer></script>  
+</head>
+<body>
+  <header>    
+    <h1>Function</h1>    
+    
+  </header>
+  <section>
+    <h2>Сreate constructor</h2>
+    <p>
+      Создайте конструктор функций для человека (Person). Каждый человек (Person) должен иметь:
+      <ol>
+        <li>свойства firstname и lastname и age (возраст);
+          <ol>
+            <li>firstname и lastname всегда должны быть строковыми от 3 до 20 символов и содержать только латинские буквы</li>
+            <li>age (возраст) всегда должен быть числом в диапазоне (0, 150), включительно
+              <ol>
+                <li>setter (сеттер) age (возраста) может получить конвертируемое в число значение.</li>
+                <li>getter (геттер) age (возраста) возвращает числовое значение. </li>
+              </ol>
+            </li>
+            <li>если любое из вышеперечисленного не выполняется, то выдается ошибка</li>
+          </ol>
+        </li>
+        <li>свойство fullname;
+          <ol>
+            <li>getter (геттер) возвращает строку в формате 'firstname lastname'</li>
+            <li>setter (сеттер) получает строку формата 'firstname lastname'
+              <ol>
+                <li>он должен разобрать её (строку) и установить firstname и lastname.</li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li>метод introduce(), который возвращает строку в формате 'Hello! My name is fullname and I am age-years-old'</li>
+        <li>все методы (introduce, геттеры и сеттеры) должны быть прикреплены к prototype (прото-типу) of the Person (человека).</li>        
+      </ol>
+      Используем console.js. Вводим 3 значения firstname и lastname и age. На выходе должна быть строка из метода introduce() или ошибка, если данные введены не верно!
+    </p>
+    <label>
+      Firstname:
+      <input type="text" id="firstName">
+    </label>
+    <label>
+      Lastname:
+      <input type="text" id="lastName">
+    </label>
+    <label>
+      Age:
+      <input type="text" id="age">
+    </label>
+    <button id="button">Execute</button>
+    <div id="console"></div>
+    <script>
+      const button = document.getElementById('button');  
+      const firstName = document.getElementById('firstName');
+      const lastName = document.getElementById('lastName');
+      const age = document.getElementById('age');       
+      
+
+      class Person {
+        constructor(firstName, lastName, age) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.age = age;
+        }        
+        
+        get firstName() {
+          return this._firstName;
+        }
+
+        set firstName(value) {
+          if (value.length === 0) {
+            jsConsole.writeLine('Fill in Firstname field');
+            return;
+          }
+
+          if (/^[a-zA-Z]{3,20}$/.test(value)) {
+            this._firstName = value;            
+          } else {
+            jsConsole.writeLine('Incorrect Firstname');
+            return;
+          }          
+        }
+
+        get lastName() {
+          return this._lastName;
+        }
+
+        set lastName(value) {
+          if (value.length === 0) {
+            jsConsole.writeLine('Fill in Lastname field');
+            return;
+          }
+
+          if (/^[a-zA-Z]{3,20}$/.test(value)) {
+            this._lastName = value;            
+          } else {
+            jsConsole.writeLine('Incorrect Lastname');
+            return;
+          }  
+        }
+
+        get age() {
+          return this._age;
+        }
+
+        set age(value) {
+          if (value === 'null' || value === 'false') {
+            return this._age = 0;
+          }
+
+          if (value === 'true') {
+            return this._age = 1;
+          }
+
+          if (value.length === 0) {
+            jsConsole.writeLine('Fill in Age field');
+            return;
+          }
+
+          if ((isNaN(+value)) || (value < 0 || value > 150)) {
+            jsConsole.writeLine('Incorrect Age');
+            return;
+          }  
+          
+          this._age = value;
+        }
+
+        get fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        }
+
+        set fullName(value) {
+          const valueDate = value.split(' ');
+          this.firstName = valueDate[0];
+          this.lastName = valueDate[1];          
+        }
+
+        introduce() {
+          if (this.firstName === undefined || this.lastName === undefined || this.age === undefined) {
+            return;
+          } else {
+            jsConsole.writeLine(`Hello! My name is ${this.fullName} and I am ${this.age} years old`);
+            return;
+          }       
+        }
+      }            
+
+      button.addEventListener('click',() => {
+        let person = new Person(firstName.value, lastName.value, age.value);
+        person.introduce();
+      })
+    </script>
+  </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-2</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/js-console.css">
+  <script src="js/js-console.js" defer></script>  
+</head>
+<body>
+  <header>    
+    <h1>Function</h1>    
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">01-ReverseString</a>
+        </li>
+        <li>
+          <a href="task-2.html">02-BracketChecker</a>
+        </li>
+        <li>
+          <a href="task-3.html">03-SubstringCount</a>
+        </li>
+        <li>
+          <a href="task-4.html">04-UpCaseLowerCase</a>
+        </li>
+        <li>
+          <a href="task-5.html">05-nbsp</a>
+        </li> 
+        <li>
+          <a href="task-6.html">06-ExtractText</a>
+        </li>
+        <li>
+          <a href="task-7.html">07-ParseURL</a>
+        </li>
+        <li>
+          <a href="task-8.html">08-BBCode</a>
+        </li>
+        <li>
+          <a href="task-9.html">09-ExtractEmail</a>
+        </li>
+        <li>
+          <a href="task-10.html">10-Polindrome</a>
+        </li> 
+        <li>
+          <a href="task-11.html">11-StringFormat</a>
+        </li>
+        <li>
+          <a href="task-12.html">12-Templates</a>
+        </li>             
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>02 Bracket Checker</h2>
+    <p>
+      Напишите функцию, чтобы проверить, правильно ли помещены скобки в заданном выражении.
+    </p>    
+    <label>
+      Expression:
+      <input type="text" id="expression">
+    </label>
+    <button id="button">Execute</button>
+    <div id="console"></div>
+    <script>
+      let button = document.getElementById('button');                  
+      
+      let checkBrackets = () => {
+        let expression = document.getElementById('expression').value;        
+
+        let count = 0;
+        let openBracket = '(';
+        let closeBracket = ')';
+        let empty = expression.includes('()');
+        
+        let search1 = expression.indexOf(openBracket);
+        let search2 = expression.indexOf(closeBracket);
+        let search3 = expression.lastIndexOf(openBracket);
+        let search4 = expression.lastIndexOf(closeBracket);        
+
+        if (search1 !== -1 && search1 < search2 && search2 !== -1 && search4 > search3 && !empty)  {
+
+          for (i = 0; i < expression.length; i++) {          
+            if (expression[i] === '(') {
+              count++;              
+            }
+            else if (expression[i] === ')') {
+              count--;              
+            }             
+          }  
+
+          (count === 0) ? jsConsole.writeLine('Valid expression') : jsConsole.writeLine('Invalid expression');    
+
+          return count === 0;
+
+        } else {
+          jsConsole.writeLine('Invalid expression');        
+        }                                  
+      }       
+      
+      button.addEventListener('click', checkBrackets);
+    </script>
+  </section>
+</body>
+</html>

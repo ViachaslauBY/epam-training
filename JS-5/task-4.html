@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-4</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/js-console.css">
+  <script src="js/js-console.js" defer></script>  
+</head>
+<body>
+  <header>    
+    <h1>Function</h1>    
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">01-ConcatStrings</a>
+        </li>
+        <li>
+          <a href="task-2.html">02-CompareParameters</a>
+        </li>
+        <li>
+          <a href="task-3.html">03-OutputMessage</a>
+        </li>
+        <li>
+          <a href="task-4.html">04-NumbersFibonacci</a>
+        </li>
+        <li>
+          <a href="task-5.html">05-Spam</a>
+        </li> 
+        <li>
+          <a href="task-6.html">06-Ellipsis</a>
+        </li>               
+      </ul>   
+    </nav>
+  </header>
+  <section>
+    <h2>04 Numbers Fibonacci</h2>    
+      <p>
+        Напишите функцию, которая которая возвращает n-е число Фибоначчи. Последовательность чисел Фибоначчи вычисляется по формуле формулу F(n) = F(n-1) + F(n-2). В ней каждое следующее число вычисляется как сумма двух предыдущих. Первые два числа равны 1 и 1.        
+      </p>             
+    <label>
+      Number:
+      <input type="text" id="number">
+    </label>                  
+    <button id="button">Execute</button>
+    <div id="console"></div>
+    <script>
+      let button = document.getElementById('button');              
+
+      let findFibonacciNumber = () => {
+        let number = document.getElementById('number').value;  
+        
+        let prev = 1;
+        let next = 1;
+
+        for (let i = 3; i <= +number; i++) {
+          let current = prev + next;
+          prev = next;
+          next = current;
+        }
+
+        jsConsole.writeLine(next);                    
+      }                         
+
+      button.addEventListener('click', findFibonacciNumber);      
+    </script>
+  </section>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-3</title>
+  <script src="main.js" defer></script>
+  <style>         
+    .items10.hidden,
+    .items15.hidden  {
+      display: none;
+    }
+
+    th {
+      text-align: left;
+    }    
+
+    input[type="image"] {
+      padding: 5px;
+      width: 17px;
+      height: 15px;
+      border: 1px solid #a4abb2;
+      border-radius: 5px;
+    }
+
+    input[type="checkbox"] {
+      cursor: pointer;      
+    }
+
+    a {
+      display: inline-block;            
+      text-decoration: none;
+      color: #000;
+      vertical-align: middle;
+    }
+
+    a.button {            
+      width: 22px;
+      height: 22px;
+      padding: 5px;      
+      border: 1px solid #a4abb2;
+      border-radius: 5px;
+      text-align: center;            
+    }
+    
+  </style>
+</head>
+<body>
+  <form action="@">
+    <span>Drag a column header and drop it here to group by that column</span>
+    <table border="1" cellspacing="0" cellpadding="5">      
+      <thead style="background-color: #e6e8ea;">
+        <tr>
+          <th>ProductID</th>
+          <th width="270">Product name</th>
+          <th>Unit price</th>
+          <th>Quantity per unit</th>
+          <th>Units in stock</th>
+          <th>Discontinued</th>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" style="width: 80px;">
+          </td>
+          <td>
+            <input type="text" style="width: 255px;">
+          </td>
+          <td>
+            <input type="text" style="margin-right: 3px; width: 100px; vertical-align: middle;">
+            <input type="image" src="img/icon-filter.png" alt="Filter" style="vertical-align: middle;">
+          </td>
+          <td>
+            <input type="text" style="width: 145px;">
+          </td>
+          <td>
+            <input type="text" style="margin-right: 3px; width: 80px; vertical-align: middle;">
+            <input type="image" src="img/icon-filter.png" alt="Filter" style="vertical-align: middle;">
+          </td>
+          <td>
+            <input type="checkbox" style="vertical-align: middle;">
+            <input type="image" src="img/icon-filter.png" alt="Filter" style="vertical-align: middle;">
+          </td>
+        </tr>
+      </thead>
+        <tbody>
+          <tr>
+            <td>31</td>
+            <td>Salt</td>
+            <td>$3.00</td>
+            <td>12 boxes x 20 bags</td>
+            <td>339</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr>
+            <td>32</td>
+            <td>Sugar</td>
+            <td>$15.00</td>
+            <td>44 - 12 oz bottles</td>
+            <td>156</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr>
+            <td>33</td>
+            <td>Flour</td>
+            <td>$12.00</td>
+            <td>17 - 550 oz bottles</td>
+            <td>145</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr>
+            <td>34</td>
+            <td>Oranges</td>
+            <td>$26.00</td>
+            <td>28 - 6 oz jars</td>
+            <td>523</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr>
+            <td>35</td>
+            <td>Beer</td>
+            <td>$3.45</td>
+            <td>26 boxes</td>
+            <td>10</td>
+            <td>
+              <input type="checkbox" checked>
+            </td>
+          </tr>
+          <tr class="items10">
+            <td>36</td>
+            <td>Liquor</td>
+            <td>$25.00</td>
+            <td>12 - 8 oz jars</td>
+            <td>10</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr class="items10">
+            <td>37</td>
+            <td>Whiskey</td>
+            <td>$30.00</td>
+            <td>12 - 1 lb pkgs.</td>
+            <td>15</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr class="items10">
+            <td>38</td>
+            <td>Сarrot</td>
+            <td>$5.00</td>
+            <td>13 - 12 oz jars</td>
+            <td>16</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr class="items10">
+            <td>39</td>
+            <td>Rice</td>
+            <td>$17.00</td>
+            <td>15 - 500 lb pkgs.</td>
+            <td>229</td>
+            <td>
+              <input type="checkbox" checked>
+            </td>
+          </tr>
+          <tr class="items10">
+            <td>40</td>
+            <td>Cakes</td>
+            <td>$11.00</td>
+            <td>14 - 200 ml jars</td>
+            <td>33</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr> 
+          <tr class="items15 hidden">
+            <td>41</td>
+            <td>Sweets</td>
+            <td>$5.00</td>
+            <td>12 - 8 oz jars</td>
+            <td>20</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr class="items15 hidden">
+            <td>42</td>
+            <td>Cigarettes</td>
+            <td>$10.00</td>
+            <td>12 - 1 lb pkgs.</td>
+            <td>13</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr class="items15 hidden">
+            <td>43</td>
+            <td>Honey</td>
+            <td>$20.00</td>
+            <td>15 - 12 oz jars</td>
+            <td>6</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>
+          <tr class="items15 hidden">
+            <td>44</td>
+            <td>Jam</td>
+            <td>$27.00</td>
+            <td>18 - 500 lb pkgs.</td>
+            <td>29</td>
+            <td>
+              <input type="checkbox" checked>
+            </td>
+          </tr>
+          <tr class="items15 hidden">
+            <td>45</td>
+            <td>Onion</td>
+            <td>$11.00</td>
+            <td>12 - 200 ml jars</td>
+            <td>31</td>
+            <td>
+              <input type="checkbox">
+            </td>
+          </tr>         
+        </tbody>
+        <tfoot style="background-color: #e6e8ea;">
+          <tr>
+            <td colspan="2" style="border-right: none;">
+              <a class="button" href="index.html">
+                <img src="img/arr-left.png" width="10" alt="Button">
+              </a> 
+              <a class="button" href="page2.html">
+                <img src="img/arr-left2.png" width="10" alt="Button">
+              </a>
+              <a href="index.html">1</a>             
+              <a href="page2.html">2</a>             
+              <a href="page3.html">3</a>
+              <a class="button" href="page3.html">
+                <img src="img/arr-right2.png" width="10" alt="Button">
+              </a>
+              <a class="button" href="page3.html">
+                <img src="img/arr-right.png" width="10" alt="Button">
+              </a>                            
+            </td> 
+            <td style="border-right: none; border-left: none;">
+              Page size:
+              <select name="number" id="select">
+                <option value="5">5</option>
+                <option value="10" selected>10</option>
+                <option value="15">15</option>
+              </select> 
+            </td> 
+            <td colspan="3" align="right" style="border-left: none;">
+              45 items in 3 pages
+            </td>                 
+          </tr>
+        </tfoot>      
+    </table>
+  </form>
+</body>
+</html>

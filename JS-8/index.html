@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-1</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/js-console.css">
+  <script src="js/main.js" defer></script>      
+</head>
+<body>
+  <header>    
+    <h1>DOM</h1>    
+    <nav>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">01-FindDivs</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="task-2.html">02-GetValueInput</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="task-3.html">03-ChangeBackgroundColor</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="task-4.html">04-CircleMotion</a>
+        </li>                          
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>01 Find Divs</h2>
+    <p>
+      Напишите сценарий, который выбирает все узлы &lt;div&gt;, которые непосредственно внутри других элементов &lt;div&gt;
+      <ul>
+        <li>Создайте функцию с помощью querySelectorAll()</li>
+        <li>Создайте функцию с помощью getElementsByTagName()</li>
+      </ul>            
+    </p>    
+
+    <button id="button">Select via .getElementsByTagName()</button>
+    <button id="button2">Select via .querySelectorAll()</button>
+    
+    <div class="block first">Lonely Div</div>
+    <div class="block">
+      <div class="block">Div inside another div 1</div>
+      <div class="block">Div inside another div 2</div>      
+    </div>
+    <div class="block">Another lonely Div</div>
+  </section>
+</body>
+</html>

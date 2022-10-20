@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-3</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/js-console.css">
+  <script src="js/js-console.js" defer></script>  
+</head>
+<body>
+  <header>    
+    <h1>Function</h1>    
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">01-LastDigit</a>
+        </li>
+        <li>
+          <a href="task-2.html">02-ReverseDigits</a>
+        </li>
+        <li>
+          <a href="task-3.html">03-WordCount</a>
+        </li>
+        <li>
+          <a href="task-4.html">04-DivCount</a>
+        </li>
+        <li>
+          <a href="task-5.html">05-NumberCount</a>
+        </li>
+        <li>
+          <a href="task-6.html">06-TwoNeighbors</a>
+        </li>
+        <li>
+          <a href="task-7.html">07-TwoNeighborsBigger</a>
+        </li>        
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>03 Word Count</h2>
+    <p>
+      Напишите функцию, которая находит все вхождения слова в текст(поиск с учетом регистра или без учета регистра, используйте перегрузку функций).   
+    </p> 
+    <label>
+      Text:
+      <textarea id="text" cols="80" rows="4"></textarea>
+    </label>
+    <label for="">Register
+      <input id="checkbox" type="checkbox" checked>
+    </label>    
+    <label>
+      Word:
+      <input type="text" id="word">      
+    </label>    
+    
+    <button id="button">Execute</button>
+    <div id="console"></div>
+    <script>
+      let button = document.getElementById('button');
+      let checkbox = document.getElementById('checkbox');        
+
+      let findWord = () => {
+        let text = document.getElementById('text').value;
+        let word = document.getElementById('word').value;
+        let result;
+
+        let compareWord = (text, word) => {
+          result = text.filter(el => el === word);
+          jsConsole.writeLine(`There are ${result.length} occurances of the word "${word}"`);
+        } 
+
+        if (checkbox.checked) {
+          let сhecked = text.split(' ');
+          compareWord(сhecked, word);
+        } else {
+          let noChecked =  text.toLowerCase().split(' ');
+          let lowerCase = word.toLowerCase();
+          compareWord(noChecked, lowerCase);
+        }
+      }
+
+      button.addEventListener('click', findWord);
+    </script>
+  </section>
+</body>
+</html>

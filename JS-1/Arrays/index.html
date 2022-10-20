@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Arrays</title>
+</head>
+<body>
+  <h1>Arrays</h1>
+  <section>
+    <h2>Task 1</h2>
+    <p>
+      Требуется: Создать массив размерностью N элементов, заполнить его произвольными целыми значениями. Вывести наибольшее значение массива, наименьшее значение массива, общую сумму элементов, среднее арифметическое всех элементов, вывести все нечетные значения. 
+    </p>
+    <table>
+      <tbody>
+        <tr>
+          <td>Введите размерность массива</td>
+          <td>
+            <input id="uniformity" type="text" placeholder="Enter number" value="">
+          </td>
+          <td rowspan="7">
+            <button id="buttonCalculate">Выполнить расчет</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Готовый массив</td>
+          <td>
+            <input id="arrValue" type="text" value="">
+          </td>
+        </tr>
+        <tr>
+          <td>Наибольшее значение массива</td>
+          <td>
+            <input id="maxValue" type="text" value="">
+          </td>
+        </tr>
+        <tr>
+          <td>Наименьшее значение массива</td>
+          <td>
+            <input id="minValue" type="text" value="">
+          </td>
+        </tr>
+        <tr>
+          <td>Сумма всех элементов</td>
+          <td>
+            <input id="sumValue" type="text" value="">
+          </td>
+        </tr>
+        <tr>
+          <td>Cреднее арифметическое элементов</td>
+          <td>
+            <input id="averageValue" type="text" value="">
+          </td>
+        </tr>
+        <tr>
+          <td>Все нечетные значения элементов</td>
+          <td>
+            <input id="oddValue" type="text" value="">          
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Task 2</h2>
+    <p>
+      Требуется: Создать двумерный массив элементов размерностью 5х5 и заполнить его произволь-ными целочисленными значениями.  По главной диагонали все числа со знаком (-) заменить на 0, а числа со знаком (+) на число 1.
+    </p>    
+    <div>
+      <script>
+        document.write("Исходный массив:" + "<br/>");
+        let arr = new Array(5);
+
+        for (let i = 0; i < arr.length; i++) { 
+            arr[i] = new Array(5);            
+        }
+
+        for (let i = 0; i < arr.length; i++) {
+          
+            for (let j = 0; j < arr[i].length; j++) {                
+              document.write(arr[i][j] = Math.ceil(Math.random() * 9) * (Math.round(Math.random()) ? 1 : -1)) ;  // заполняем подмассив числами
+              document.write("&nbsp;");
+            }
+          
+            document.write("<br/>");
+        }
+
+        document.write("<hr/>");
+        document.write("Полученный массив:" + "<br/>");
+
+        for (let i = 0; i < arr.length; i++) {
+
+          for (let j = 0; j < arr[i].length; j++) {
+            if (i == j) {
+              arr[i][j] = ( arr[i][j] >= 0 ) ? 1 : 0;                    
+            }
+          }
+        }
+
+        for (let i = 0; i < arr.length; i++) {
+
+          for (let j = 0; j < arr[i].length; j++) {
+            document.write(arr[i][j]);
+            document.write("&nbsp;");
+          }
+
+          document.write("<br/>");
+        }
+      </script>
+    </div>    
+  </section>
+  <section>
+    <h2>Task 3</h2>
+    <p>
+      Дан вещественный вектор А(n). Найти количество элементов вектора, больших среднего арифметического всех его элементов.
+    </p>
+    <form>
+      Введите значения целочисленного вектора раздиляя их одним пробелом 
+      <input id="vectorValue" type="text" placeholder="Enter vector" value="">
+      <button id="buttonDeem">Посчитать</button>
+      <input id="countValue" type="text" value="">
+    </form>
+  </section>
+</body>
+</html>

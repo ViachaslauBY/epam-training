@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-5</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/js-console.css">
+  <script src="js/js-console.js" defer></script>  
+</head>
+<body>
+  <header>    
+    <h1>Function</h1>    
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">01-LastDigit</a>
+        </li>
+        <li>
+          <a href="task-2.html">02-ReverseDigits</a>
+        </li>
+        <li>
+          <a href="task-3.html">03-WordCount</a>
+        </li>
+        <li>
+          <a href="task-4.html">04-DivCount</a>
+        </li>
+        <li>
+          <a href="task-5.html">05-NumberCount</a>
+        </li>
+        <li>
+          <a href="task-6.html">06-TwoNeighbors</a>
+        </li>
+        <li>
+          <a href="task-7.html">07-TwoNeighborsBigger</a>
+        </li>        
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>05 Number Count</h2>
+    <p>
+      Напишите функцию, которая подсчитывает, сколько раз встречается заданное число в заданном массиве. Напишите тестовую функцию, чтобы проверить правильность работы функции. Вводить значения через пробел.
+    </p>    
+    <label>
+      Sequence
+      <input type="text" id="arr">
+    </label> 
+    <label>
+      Search
+      <input type="text" id="num">
+    </label>   
+    <button id="button">Execute</button>
+    <button id="test">Test</button>
+    <div id="console"></div>
+    <script>
+      let button = document.getElementById('button');      
+      let buttonTest = document.getElementById('test');
+      
+      // let randomInteger = (min, max) => {        
+      //   let rand = min + Math.random() * (max + 1 - min);
+      //   return Math.floor(rand);
+      // }
+
+      let randomInteger = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+      let randomNumber = randomInteger(1, 10);
+      
+      let randomArray = [];
+      for (let i = 0; i < 10; i++) {
+        randomArray.push(randomInteger(1, 10));
+      }  
+      
+      let calculateNumber = (array, number) => jsConsole.writeLine(array.filter(el => el === number).length); 
+
+      let execute = () => {
+        let arr = document.getElementById('arr').value.trim().split(' ');        
+        let num = document.getElementById('num').value;        
+        
+        calculateNumber(arr, num);            
+      }      
+      
+      let test = () => {  
+        let arr = document.getElementById('arr').value = randomArray;               
+        let num = document.getElementById('num').value = randomNumber;                         
+        
+        calculateNumber(arr, num);           
+      } 
+
+      button.addEventListener('click', execute);
+      buttonTest.addEventListener('click', test);
+    </script>
+  </section>
+</body>
+</html>

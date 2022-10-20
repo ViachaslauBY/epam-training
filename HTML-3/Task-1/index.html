@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-1</title>
+</head>
+<body>
+  <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
+    <table border="1">      
+      <col width="190">
+      <col width="410">            
+      <tbody>
+        <tr>
+          <th align="right">Last Name</th>
+          <td>
+            <input type="text" name="Last_Name" required autocomplete="on" autofocus>
+          </td>
+        </tr>
+        <tr>
+          <th align="right">First Name</th>
+          <td>
+            <input type="text" name="First_Name" required autocomplete="on">
+          </td>
+        </tr>
+        <tr>
+          <th align="right">Address</th>
+          <td>
+            <textarea name="Address" cols="23" rows="4" required autocomplete="on"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <th align="right">City</th>
+          <td>
+            <input id="city" type="text" name="City" size="9" required autocomplete="on">
+            <b>State</b> <input type="text" name="State" size="3" autocomplete="on">                         
+          </td>
+        </tr>
+        <tr>
+          <th align="right">Zip/Postal Code</th>
+          <td>
+            <input type="number" name="Postal_Code" min="1" max="999999" value="9325" required autocomplete="on">
+          </td>
+        </tr>
+        <tr>
+          <th align="right">Country</th>
+          <td>
+            <select name="Country" style="padding-right: 100px;">
+              <option value="Belarus">Belarus</option>
+              <option value="Bulgaria" selected>Bulgaria</option>
+              <option value="France">France</option>
+              <option value="Russia">Russia</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th align="right">Phone (country code, area code, number</th>
+          <td>
+            (+<input type="tel" name="Country-code" size="3" autocomplete="on">)
+            <input type="tel" name="Area-code" size="3" autocomplete="on">            
+            - <input type="tel" name="Phone" maxlength="7" minlength="1" size="7" autocomplete="on">
+          </td>
+        </tr>
+        <tr>
+          <th align="right">E-mail</th>
+          <td>
+            <input type="email" name="Email" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" autocomplete="on">
+          </td>
+        </tr>
+        <tr>
+          <th align="right">Birth date</th>
+          <td>
+            Month <input type="number" name="Birth-Month" max="12" min="1" style="width: 45px;" autocomplete="on">
+            Day <input type="number" name="Birth-Day" max="31" min="1" style="width: 45px;" autocomplete="on">
+            Year (4 digit) <input type="number" name="Birth-Year" max="2021" min="1900" style="width: 60px;" autocomplete="on">             
+          </td>
+        </tr>
+        <tr>
+          <th align="right">Gender</th>
+          <td>
+            <select name="Gender" >
+              <option value="Male">Male</option>              
+              <option value="Female">Famale</option>              
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th align="right">Starting date</th>
+          <td>
+            <input type="radio" name="Starting-date" value="Spring 2006" checked>Spring 2006
+            <input type="radio" name="Starting-date" value="Summer 2006">Summer 2006
+          </td>
+        </tr>
+        <th align="right">Comments/Question</th>
+        <td>
+          <textarea name="comments" cols="25" rows="7"></textarea>
+        </td>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear This Form">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</body>
+</html>

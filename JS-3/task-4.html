@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-4</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/js-console.css">
+  <script src="js/js-console.js" defer></script>  
+</head>
+<body>
+  <header>    
+    <h1>Function</h1>    
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">01-LastDigit</a>
+        </li>
+        <li>
+          <a href="task-2.html">02-ReverseDigits</a>
+        </li>
+        <li>
+          <a href="task-3.html">03-WordCount</a>
+        </li>
+        <li>
+          <a href="task-4.html">04-DivCount</a>
+        </li>
+        <li>
+          <a href="task-5.html">05-NumberCount</a>
+        </li>
+        <li>
+          <a href="task-6.html">06-TwoNeighbors</a>
+        </li>
+        <li>
+          <a href="task-7.html">07-TwoNeighborsBigger</a>
+        </li>        
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>04 Div Count</h2>
+    <p>
+      Напишите функцию для подсчета количества тегов &lt;div&gt; на веб-странице.
+    </p>        
+    <button id="button">Execute</button>
+    <div id="console"></div>
+    <script>
+      let button = document.getElementById('button');
+      let divs = document.querySelectorAll('div');
+
+      let calculateDiv = () => jsConsole.writeLine(divs.length);                            
+
+      button.addEventListener('click', calculateDiv);
+    </script>
+  </section>
+</body>
+</html>

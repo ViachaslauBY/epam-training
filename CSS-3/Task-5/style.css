@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+}
+
+.wrapper {
+  margin: 10px auto;
+  padding: 10px;
+  max-width: 880px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav__item {
+  margin-right: 5px;
+}
+
+.nav__link {
+  font-size: 30px;
+  font-weight: 700;
+  color: #00b0f0;
+}
+
+.stripe {
+  margin-bottom: 10px;
+  height: 3px;
+  background-color: #000;
+}
+
+.main {
+  display: flex;
+}
+
+.assortment {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 570px;
+}
+.assortment__item {
+  margin-right: 10px;
+  margin-bottom: 5px;
+  padding: 10px;
+  width: fit-content;
+}
+
+.item__title {
+  padding: 0 10px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.item__wrapper {
+  display: flex;
+}
+
+.item__img-wrapper {
+  margin-right: 10px;
+}
+
+.item__img {
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 150px;
+}
+
+.item__img-title {
+  text-align: center;
+}
+
+.item__descritipon {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item__text {
+  margin-bottom: 10px;
+}
+
+.configuration {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.form__section {
+  margin-bottom: 15px;
+}
+
+.form__input {
+  -webkit-appearance: none;
+  width: 220px;
+  height: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.form__input:hover {
+  opacity: 1;
+}
+
+.form__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 19px;
+  border: 0;
+  background: url("img/icon-range.png");
+  cursor: pointer;
+}
+
+.form__input::-moz-range-thumb {
+  width: 12px;
+  height: 19px;
+  border: 0;
+  background: url("img/icon-range.png");
+  cursor: pointer;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://fonts.cdnfonts.com/css/bradley-hand-2" rel="stylesheet">
+  <link href="http://fonts.cdnfonts.com/css/liferdas-extra" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <title>Drag and Drop</title>
+</head>
+<body>
+  <div class="wrapper">    
+    <h1 class="title">Очисти двор от мусора</h1>
+    <h2 class="subtitle">(Собери весь мусор)</h2>    
+    <form class="form">
+      <label class="label">
+        Количество мусора:
+        <input  id="number" type="number">
+      </label>    
+      <button id="button" type="button">Добавить</button>
+    </form> 
+    <div id="area">        
+      <div class="garbage-can"></div>
+      <div class="garbage-can2"></div>
+      <span class="count">0</span>
+      <img class="win" src="img/win.png" alt="Победа">
+    </div>
+  </div>  
+</body>
+</html>
